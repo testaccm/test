@@ -25,6 +25,10 @@ li {
     padding: 5px;
 }
 
+ul {
+    margin: 0;
+}
+
 html, body {
     min-height: 100%
 }
