@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Дешёвый VPN — Быстрое подключение</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description"
+          content="Сайт с инструкциями по подключению Дешёвый VPN для iOS, Android, Windows, macOS, Linux и Android TV."/>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header>
+    <div class="container nav">
+        <p class="logo" data-link="home" aria-label="На главную">
+            <img id="project-logo" src="../image/logo.jpg" alt="Логотип" style="border-radius:32px; background:linear-gradient(135deg, var(--brand), var(--brand-2));"/>
+            <span class="brand">Дешёвый VPN</span>
+        </p>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+            <span class="sun-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+            <span class="moon-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+        </button>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- TEMPLATE ДЛЯ РАЗДЕЛОВ ОС -->
+    <section id="ios" data-view class="active">
+        <div class="backbar">
+            <a href="../#ios" class="back" aria-label="Назад">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M14 7l-5 5 5 5V7z"/>
+                </svg>
+                Назад
+            </a>
+
+            <div class="pill">iOS</div>
+        </div>
+        <div class="hero" style="margin-bottom:14px">
+            <div>
+                <h2>Настройка VPN (Streisand)</h2>
+            </div>
+        </div>
+
+        <div class="steps">
+            <div class="step"><span class="num">1</span> Установи приложение: <a href="https://apps.apple.com/ru/app/streisand/id6450534064" target="_blank">Streisand</a></div>
+            <div class="step"><span class="num">2</span> Запусти приложение <code>Streisand</code></div>
+            <div class="step"><span class="num">3</span>
+
+                <ul>
+                    <li>Установи Роутинг: <a href="streisand://aW1wb3J0L3JvdXRlOi8vWW5Cc2FYTjBNRERWQVFJREJBVUdEQlVXRjFWeWRXeGxjMTFrYjIxaGFXNU5ZWFJqYUdWeVZHNWhiV1ZlWkc5dFlXbHVVM1J5WVhSbFozbFVkWFZwWktJSEVkUUlDUW9MREEwT0VGMWtiMjFoYVc1TllYUmphR1Z5Vm1SdmJXRnBibEpwY0Z0dmRYUmliM1Z1WkZSaFoxWnNhVzVsWVhLZ29ROVlaMlZ2YVhBNmNuVldaR2x5WldOMDBoSUpFQk5iYjNWMFltOTFibVJVWVdlaEZGNXlaV2RsZUhBNkxpcGNMbkoxSkcwQVVnQlZBQzBBUkFCcEFISUFaUUJqQUhUWVBOMzMyRHpkK2xwSlVFOXVSR1Z0WVc1a1h4QWtOVU5CUmpGRU5rWXRPRVV3TWkwME5EUTFMVUkxTWpjdE5rVkVRVGN3TVRZNE1UVkRDQk1aSnl3N1FFTk1XbUZrY0hkNGVvT0tqNXVkck1mU0FBQUFBQUFBQVFFQUFBQUFBQUFBR0FBQUFBQUFBQUFBQUFBQUFBQUFBUGs9" target="_blank">нажми</a></li>
+                    <li>Далее: <code>Streisand</code> -> <code>Настройки</code> -> <code>Роутинг</code></li>
+                </ul>
+
+                <p>Вот как это должно выглядеть:</p>
+                <img src="../image/ios_straisand.JPEG" alt="Логотип" width="420" height="401" />
+            </div>
+            <div class="step"><span class="num">4</span> Перейди на главное меню</div>
+            <div class="step"><span class="num">5</span> Нажми на <code>+</code> сверху справа и <code>«Добавить из
+                буфера»</code>. Разрешите вставку
+            </div>
+            <div class="step"><span class="num">6</span> Чтобы включить VPN, нажми на синюю иконку включения</div>
+            <div class="step"><span class="num">7</span> Выдай приложению разрешение на добавление VPN</div>
+            <div class="step"><span class="num">8</span> Чтобы отключить, нажми на зеленую иконку паузы</div>
+        </div>
+    </section>
+
+    <div class="footer">© <span id="year"></span> Дешёвый VPN. Все права защищены.</div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>
