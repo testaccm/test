@@ -21,6 +21,10 @@ a {
     color: var(--text);
 }
 
+li {
+    padding: 5px;
+}
+
 html, body {
     min-height: 100%
 }
