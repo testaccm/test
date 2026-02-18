@@ -319,30 +319,30 @@
                 <div class="code">
                     <button class="copybtn" data-copy="#win-nekoray-rules">Копировать</button>
                     <pre id="win-nekoray-rules">
-						domain:userapi.com
-						domain:mradx.net
-						domain:vkuserphoto.com
-						domain:vk-portal.net
-						domain:vkuseraudio.com
-						domain:vk.com
-                        domain:yandex.com
-                        domain:naydex.net
-                        domain:yandex.net
-                        domain:okko.tv
-                        domain:ivi.tv
-                        domain:yadi.sk
-                        domain:lstorage.net
-                        domain:yastatic.net
-                        domain:ozonusercontent.com
-                        domain:google.com
-                        domain:localhost
-                        domain:avito.st
-                        suffix:.ru
-                        suffix:.su
-                        ruleset:geoip-ru
-                        ruleset:geosite-ru
-                        ip:127.0.0.1/32
-                        ip:::1/128
+domain:userapi.com
+domain:mradx.net
+domain:vkuserphoto.com
+domain:vk-portal.net
+domain:vkuseraudio.com
+domain:vk.com
+domain:yandex.com
+domain:naydex.net
+domain:yandex.net
+domain:okko.tv
+domain:ivi.tv
+domain:yadi.sk
+domain:lstorage.net
+domain:yastatic.net
+domain:ozonusercontent.com
+domain:google.com
+domain:localhost
+domain:avito.st
+suffix:.ru
+suffix:.su
+ruleset:geoip-ru
+ruleset:geosite-ru
+ip:127.0.0.1/32
+ip:::1/128
 					</pre>
                 </div>
                 <ul>
@@ -466,35 +466,61 @@
 
         <div class="hero" style="margin-bottom:14px">
             <div>
-                <h2>Настройка VPN (NekoBox)</h2>
+                <h2>Настройка VPN (Throne)</h2>
             </div>
         </div>
 
         <div class="steps">
 
             <div class="step"><span class="num">1</span> Скачай приложение: <a
-                    href="https://github.com/MatsuriDayo/nekoray/releases/tag/4.0.1" target="_blank">NekoBox</a></div>
+                    href="https://github.com/throneproj/Throne/releases/download/1.0.13/Throne-1.0.13-linux-amd64.zip" target="_blank">Throne</a></div>
 
-            <div class="step"><span class="num">2</span> Разархивируй архив в загрузки: <code>nekoray-4.0.1-2024-12-12-linux64.zip</code>
+            <div class="step"><span class="num">2</span> Разархивируй архив в загрузки: <code>Throne-1.0.13-linux-amd64.zip</code>
             </div>
 
-            <div class="step"><span class="num">3</span> Перейди в папку: <code>Загрузки/nekoray/</code> и запусти
-                программу: <code>nekobox</code></div>
+            <div class="step"><span class="num">3</span> Перейди в папку: <code>Загрузки/Throne-1.0.13-linux-amd64/</code> и запусти
+                программу: <code>Throne</code></div>
 
             <div class="step"><span class="num">4</span>
 
-                <ul>
-                    <li> В программе: <code>Настройки</code> -> <code>Настройки маршрутов</code> -> <code>Базовые
-                        маршруты</code> -> <code>Кастомные маршруты</code></li>
+                 <ul>
+                    <li>В программе: <code>Маршрутизация</code> -> <code>Настройки маршрутизации</code> ->
+                        <code>Маршрут</code> -> <code>Default (нажми два раза)</code></li>
+                    <li>Скопируй текст ниже и замени всё в поле ввода <code>«Напрямую»</code>:</li>
                 </ul>
 
                 <div class="code">
                     <button class="copybtn" data-copy="#linux-nekoray-rules">Копировать</button>
-                    <pre id="linux-nekoray-rules">{"rules":[{"domain_suffix":[".ru",".su","userapi.com","mradx.net","vkuserphoto.com","vk-portal.net","vkuseraudio.com","vk.com","yandex.com","yandex.net","okko.tv","ivi.tv","yadi.sk","clstorage.net","yastatic.net","ozonusercontent.com"],"outbound":"direct"}]}</pre>
-                </div>
+<pre id="win-nekoray-rules">
+domain:userapi.com
+domain:mradx.net
+domain:vkuserphoto.com
+domain:vk-portal.net
+domain:vkuseraudio.com
+domain:vk.com
+domain:yandex.com
+domain:naydex.net
+domain:yandex.net
+domain:okko.tv
+domain:ivi.tv
+domain:yadi.sk
+domain:lstorage.net
+domain:yastatic.net
+domain:ozonusercontent.com
+domain:google.com
+domain:localhost
+domain:avito.st
+suffix:.ru
+suffix:.su
+ruleset:geoip-ru
+ruleset:geosite-ru
+ip:127.0.0.1/32
+ip:::1/128
+					</pre>   
+				</div>
 
                 <ul>
-                    <li>Нажми <code>«ОК»</code> и <code>«ОК»</code></li>
+                    <li>Нажми <code>«ОК»</code>, <code>«ОК»</code> и <code>«Yes»</code></li>
                 </ul>
 
             </div>
@@ -516,3 +542,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
