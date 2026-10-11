@@ -456,7 +456,7 @@ body[data-theme="light"] .invert { filter: none }
 
 /* ===== АДАПТИВНОСТЬ ===== */
 
-@media (max-width: 2560px) {
+@media (max-width: 900px) {
     .hero { grid-template-columns: 1fr }
     .grid { grid-template-columns: repeat(3, 1fr) }
 }
@@ -464,4 +464,123 @@ body[data-theme="light"] .invert { filter: none }
 @media (max-width: 660px) {
     .grid { grid-template-columns: repeat(2, 1fr) }
     .card { margin: 0 }
+}
+
+/* Refined responsive system: lightweight CSS keeps the site GitHub Pages ready. */
+:root {
+    color-scheme: dark;
+    --bg: #080d18;
+    --panel: rgba(17, 25, 43, .82);
+    --text: #f1f5ff;
+    --muted: #a4b0c7;
+    --brand: #8b7cff;
+    --brand-2: #53d5e8;
+    --radius: 24px;
+    --shadow: 0 18px 48px rgba(0, 0, 0, .24), inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+
+body[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f3f6fc;
+    --panel: rgba(255, 255, 255, .88);
+    --text: #172036;
+    --muted: #5d6b83;
+    --brand: #6554de;
+    --brand-2: #26a9c4;
+    --shadow: 0 18px 48px rgba(28, 45, 82, .09), inset 0 1px 0 rgba(255, 255, 255, .85);
+}
+
+html { scroll-behavior: smooth; }
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 80% 5%, color-mix(in srgb, var(--brand) 16%, transparent), transparent 34rem),
+        radial-gradient(ellipse at 5% 45%, color-mix(in srgb, var(--brand-2) 11%, transparent), transparent 32rem),
+        var(--bg);
+}
+.container { max-width: 1120px; padding: 28px 24px; }
+header { background: color-mix(in srgb, var(--bg) 82%, transparent); border-color: color-mix(in srgb, var(--text) 10%, transparent); }
+.nav { padding-block: 10px; }
+.logo { padding: 4px 8px; }
+#project-logo { width: 42px; height: 42px; border-radius: 14px !important; }
+.brand { letter-spacing: -.02em; }
+.theme-toggle { min-width: 44px; min-height: 44px; border-radius: 14px; }
+.backbar { gap: 10px; }
+.back,
+.backbar .pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: .01em;
+}
+.back { gap: 7px; }
+.back svg { width: 16px; height: 16px; }
+.hero {
+    display: block;
+    padding: clamp(24px, 5vw, 52px);
+    border-radius: 30px;
+    background: var(--panel);
+    border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+}
+.hero h1 { margin: 0; font-size: clamp(30px, 5vw, 48px); line-height: 1.1; letter-spacing: -.045em; text-align: center; }
+.grid { margin-top: 34px; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card {
+    min-height: 170px;
+    margin: 0;
+    padding: 22px;
+    gap: 8px;
+    border-radius: 22px;
+    background: color-mix(in srgb, var(--panel) 75%, transparent);
+    border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+    box-shadow: none;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--brand) 65%, transparent); background: var(--panel); box-shadow: 0 16px 34px color-mix(in srgb, var(--brand) 14%, transparent); }
+.card:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid var(--brand-2); outline-offset: 3px; }
+.card .title { font-size: 18px; letter-spacing: -.02em; }
+.card .subtitle { font-size: 14px; }
+.card svg, .card .invert { width: 36px; height: 36px; margin-top: 12px; }
+.card .glow { opacity: .18; }
+.steps { gap: 12px; }
+.step {
+    padding: 20px 22px;
+    border-radius: 18px;
+    background: var(--panel);
+    border: 1px solid color-mix(in srgb, var(--text) 9%, transparent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+    line-height: 1.65;
+}
+.step a { color: var(--brand-2); text-underline-offset: 3px; }
+.step a:hover { color: var(--brand); }
+.num { flex: 0 0 30px; width: 30px; height: 30px; border-radius: 10px; background: color-mix(in srgb, var(--brand) 18%, transparent); color: var(--brand); }
+.pill { color: #101426; }
+.pill.secondary { background: var(--panel); border-color: color-mix(in srgb, var(--text) 10%, transparent); }
+.footer { margin-top: 44px; padding: 24px; }
+[data-view] { animation: view-in .24s ease both; }
+@keyframes view-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (min-width: 1200px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 760px) {
+    .container { padding: 18px 16px; }
+    .hero { padding: 26px 18px; border-radius: 24px; }
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+    .card { min-height: 150px; padding: 17px; border-radius: 18px; }
+    .backbar { gap: 8px; }
+    .step { padding: 16px; }
+}
+@media (max-width: 420px) {
+    .brand { font-size: 15px; }
+    .grid { grid-template-columns: 1fr; }
+    .card { min-height: 126px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
